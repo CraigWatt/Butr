@@ -1,0 +1,12 @@
+<svg width="640" height="320" viewBox="0 0 640 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Butr logo concept 2">
+  <rect width="640" height="320" rx="32" fill="#FBF7EF"/>
+  <ellipse cx="316" cy="228" rx="174" ry="28" fill="#E7DECF" opacity="0.72"/>
+  <path d="M184 198C184 183 196 171 211 171H421C436 171 448 183 448 198V212C448 225 437 236 423 236H209C195 236 184 225 184 212V198Z" fill="#FFFDF8"/>
+  <path d="M200 197C200 190 206 184 213 184H421C428 184 434 190 434 197V211C434 218 428 224 421 224H213C206 224 200 218 200 211V197Z" fill="#F7F4ED"/>
+  <path d="M208 173H414C436 173 454 190 454 212C454 234 436 251 414 251H208C186 251 168 234 168 212C168 190 186 173 208 173Z" fill="#FFD54A"/>
+  <path d="M208 173H414C436 173 454 190 454 212C454 234 436 251 414 251H208C186 251 168 234 168 212C168 190 186 173 208 173Z" stroke="#D4A421" stroke-opacity="0.24" stroke-width="2"/>
+  <path d="M202 194C246 186 282 183 320 183C358 183 394 186 438 194" stroke="#FFF7D0" stroke-width="10" stroke-linecap="round"/>
+  <path d="M202 217C246 210 282 206 320 206C358 206 394 210 438 217" stroke="#D8AA31" stroke-opacity="0.26" stroke-width="8" stroke-linecap="round"/>
+  <path d="M254 180C256 175 261 172 267 172H373C379 172 384 175 386 180C389 188 383 196 374 196H266C257 196 251 188 254 180Z" fill="#FFF9C8" fill-opacity="0.76"/>
+</svg>
+

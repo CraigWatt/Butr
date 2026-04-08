@@ -1,0 +1,15 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Butr dish concept 6">
+  <rect width="960" height="720" fill="#FFFFFF"/>
+  <ellipse cx="480" cy="510" rx="300" ry="60" fill="#D3D9DD"/>
+  <path d="M176 390C176 346 212 310 256 310H704C748 310 784 346 784 390V428C784 464 755 494 718 494H242C205 494 176 464 176 428V390Z" fill="#FFF9E4" stroke="#2A241C" stroke-width="14" stroke-linejoin="round"/>
+  <ellipse cx="480" cy="392" rx="272" ry="66" fill="#E3B646" stroke="#2A241C" stroke-width="12"/>
+  <path d="M224 388C320 343 642 343 736 388" stroke="#FFF7C9" stroke-width="15" stroke-linecap="round"/>
+  <path d="M240 420C342 394 634 394 722 420" stroke="#D89F1C" stroke-opacity="0.28" stroke-width="12" stroke-linecap="round"/>
+  <path d="M288 212C288 180 314 154 346 154H568C600 154 626 180 626 212V398C626 430 600 456 568 456H346C314 456 288 430 288 398V212Z" fill="#FFD84D" stroke="#2A241C" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M306 198C363 179 418 170 480 170C536 170 587 178 610 186" stroke="#FFF9D2" stroke-width="12" stroke-linecap="round"/>
+  <path d="M306 248C366 232 421 226 478 227C534 228 587 233 608 238" stroke="#FFF0AE" stroke-width="10" stroke-linecap="round"/>
+  <path d="M308 308C378 298 438 295 493 296C551 297 589 302 608 307" stroke="#D6A11C" stroke-opacity="0.24" stroke-width="10" stroke-linecap="round"/>
+  <path d="M619 200L650 182" stroke="#2A241C" stroke-width="10" stroke-linecap="round"/>
+  <path d="M625 222L655 205" stroke="#2A241C" stroke-width="10" stroke-linecap="round"/>
+</svg>
+

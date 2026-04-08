@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@butr/domain": ["platform/domain/src/index.ts"],
+      "@butr/broker-adapters": ["services/broker-adapters/src/index.ts"],
+      "@butr/rules-engine": ["services/rules-engine/src/index.ts"],
+      "@butr/execution": ["services/execution/src/index.ts"],
+      "@butr/llm": ["services/llm/src/index.ts"],
+      "@butr/web": ["platform/web/src/index.ts"]
+    },
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true
+  }
+}

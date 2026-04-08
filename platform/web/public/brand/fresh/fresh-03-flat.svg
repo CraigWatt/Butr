@@ -1,0 +1,39 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Butr logo fresh concept 3">
+  <defs>
+    <radialGradient id="bg3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 360) rotate(90) scale(520 520)">
+      <stop stop-color="#89857D"/>
+      <stop offset="1" stop-color="#66625A"/>
+    </radialGradient>
+    <linearGradient id="dishTop3" x1="256" y1="484" x2="768" y2="484" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8E0"/>
+      <stop offset="1" stop-color="#F1E5B5"/>
+    </linearGradient>
+    <linearGradient id="dishBottom3" x1="256" y1="602" x2="768" y2="602" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B7CBDC"/>
+      <stop offset="1" stop-color="#9FB5C6"/>
+    </linearGradient>
+    <linearGradient id="butter3" x1="362" y1="306" x2="646" y2="624" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF468"/>
+      <stop offset="0.5" stop-color="#FFD94C"/>
+      <stop offset="1" stop-color="#EDC22C"/>
+    </linearGradient>
+    <filter id="shadow3" x="170" y="412" width="684" height="292" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#1A1713" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg3)"/>
+  <ellipse cx="512" cy="734" rx="326" ry="52" fill="#231B16" fill-opacity="0.34"/>
+  <g filter="url(#shadow3)">
+    <path d="M208 500C208 451 247 412 296 412H728C777 412 816 451 816 500V522C816 568 779 606 733 606H291C245 606 208 568 208 522V500Z" fill="url(#dishTop3)" stroke="#2B231B" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M232 526C232 504 250 486 272 486H752C774 486 792 504 792 526V551C792 582 767 608 735 608H289C257 608 232 582 232 551V526Z" fill="url(#dishBottom3)" stroke="#2B231B" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M258 494C332 452 690 452 764 494" stroke="#FFFDF2" stroke-width="12" stroke-linecap="round"/>
+    <path d="M286 525C358 497 666 497 738 525" stroke="#EAD798" stroke-opacity="0.72" stroke-width="10" stroke-linecap="round"/>
+    <path d="M314 390C314 347 349 312 392 312H632C675 312 710 347 710 390V530C710 573 675 608 632 608H392C349 608 314 573 314 530V390Z" fill="url(#butter3)" stroke="#2B231B" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M332 374C379 355 443 346 512 345C578 344 628 352 668 368" stroke="#FFF7BC" stroke-width="12" stroke-linecap="round"/>
+    <path d="M340 430C395 414 453 408 515 407C576 406 628 412 664 423" stroke="#FFF0A3" stroke-width="10" stroke-linecap="round"/>
+    <path d="M342 486C404 471 461 468 520 469C581 470 631 476 668 487" stroke="#D8A31D" stroke-opacity="0.24" stroke-width="10" stroke-linecap="round"/>
+    <path d="M664 363L696 345" stroke="#2B231B" stroke-width="9" stroke-linecap="round"/>
+    <path d="M350 606C360 595 376 590 394 590H630C648 590 664 595 674 606C680 616 672 630 658 630H366C352 630 344 616 350 606Z" fill="#F1C94C" stroke="#2B231B" stroke-width="10" stroke-linejoin="round"/>
+  </g>
+</svg>
+

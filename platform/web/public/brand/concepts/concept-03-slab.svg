@@ -1,0 +1,13 @@
+<svg width="640" height="320" viewBox="0 0 640 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Butr logo concept 3">
+  <rect width="640" height="320" rx="32" fill="#FBF7EF"/>
+  <ellipse cx="320" cy="228" rx="200" ry="34" fill="#E5DDCF" opacity="0.54"/>
+  <path d="M150 200C150 182 164 168 182 168H458C476 168 490 182 490 200V214C490 230 477 243 461 243H179C163 243 150 230 150 214V200Z" fill="#FFFDF8"/>
+  <path d="M166 200C166 192 173 186 181 186H459C467 186 474 192 474 200V214C474 222 467 228 459 228H181C173 228 166 222 166 214V200Z" fill="#F5F1E8"/>
+  <path d="M182 172H458C476 172 490 186 490 204C490 222 476 236 458 236H182C164 236 150 222 150 204C150 186 164 172 182 172Z" fill="#FFD54A"/>
+  <path d="M182 172H458C476 172 490 186 490 204C490 222 476 236 458 236H182C164 236 150 222 150 204C150 186 164 172 182 172Z" stroke="#C89A20" stroke-opacity="0.18" stroke-width="2"/>
+  <path d="M188 184H452" stroke="#FFF8C8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M188 205H452" stroke="#FFF1B0" stroke-opacity="0.78" stroke-width="10" stroke-linecap="round"/>
+  <path d="M188 222H452" stroke="#D3A21C" stroke-opacity="0.22" stroke-width="8" stroke-linecap="round"/>
+  <path d="M265 172C268 164 276 160 285 160H355C364 160 372 164 375 172" stroke="#FFFBE5" stroke-opacity="0.82" stroke-width="8" stroke-linecap="round"/>
+</svg>
+

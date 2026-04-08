@@ -1,0 +1,15 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Butr logo refined concept 6">
+  <rect width="1024" height="1024" fill="#FFFFFF"/>
+  <ellipse cx="512" cy="682" rx="330" ry="58" fill="#D8D8D8"/>
+  <path d="M170 526C170 466 219 418 279 418H745C805 418 854 466 854 526V604C854 659 810 704 756 704H268C214 704 170 659 170 604V526Z" fill="#FBF1C8" stroke="#29231C" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M212 594C270 614 353 627 443 633C547 638 636 634 718 623C759 618 794 611 821 603" stroke="#E2AE41" stroke-opacity="0.38" stroke-width="16" stroke-linecap="round"/>
+  <path d="M230 626C302 651 406 665 520 665C628 665 720 653 776 630" stroke="#FFF7CF" stroke-width="14" stroke-linecap="round"/>
+  <path d="M278 442C278 410 304 384 336 384H678C710 384 736 410 736 442V590C736 622 710 648 678 648H336C304 648 278 622 278 590V442Z" fill="#FFD84D" stroke="#29231C" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M296 430C351 407 410 397 478 393C555 389 629 400 706 422" stroke="#FFF8C8" stroke-width="14" stroke-linecap="round"/>
+  <path d="M304 494C363 478 424 472 490 471C560 470 620 479 696 499" stroke="#FFF1AB" stroke-width="11" stroke-linecap="round"/>
+  <path d="M306 556C371 543 432 541 498 542C563 543 623 550 692 565" stroke="#D09B19" stroke-opacity="0.24" stroke-width="10" stroke-linecap="round"/>
+  <path d="M656 404L687 385" stroke="#29231C" stroke-width="10" stroke-linecap="round"/>
+  <path d="M668 430L698 412" stroke="#29231C" stroke-width="10" stroke-linecap="round"/>
+  <path d="M190 561C190 534 212 512 239 512H791C818 512 840 534 840 561V572C840 599 818 621 791 621H239C212 621 190 599 190 572V561Z" fill="#B8C5CB" stroke="#29231C" stroke-width="16" stroke-linejoin="round"/>
+</svg>
+

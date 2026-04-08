@@ -1,0 +1,13 @@
+{
+  "name": "@butr/api",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@butr/domain": "workspace:*",
+    "@butr/broker-adapters": "workspace:*",
+    "@butr/rules-engine": "workspace:*",
+    "@butr/execution": "workspace:*",
+    "@butr/llm": "workspace:*"
+  }
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Butr</title>
+    <meta name="description" content="Butr is a calm, approval-first investing copilot for UK ISA investors." />
+    <link rel="icon" href="./brand/butr-logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card">
+        <div class="brand-row">
+          <img class="brand-mark" src="./brand/butr-logo.svg" alt="Butr logo" />
+          <div>
+            <p class="eyebrow">UK ISA investing copilot</p>
+            <h1>Butr</h1>
+          </div>
+        </div>
+        <p class="lede">Smooth investing, sharper decisions.</p>
+        <div class="status-row">
+          <span class="pill">Paper mode</span>
+          <span class="pill pill-muted">Stocks & Shares ISA only</span>
+          <span class="pill pill-muted">Approval first</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel chat-panel">
+          <div class="panel-head">
+            <h2>Chat</h2>
+            <span class="subtle">Ask Butr what to do next</span>
+          </div>
+          <div class="message assistant">
+            Can I buy £300 of Microsoft in my ISA?
+          </div>
+          <div class="message user">
+            Show me the preview first.
+          </div>
+          <div class="message assistant">
+            Preview ready. This would use available cash and needs your approval before execution.
+          </div>
+          <form class="composer">
+            <input type="text" placeholder="Ask about your portfolio..." />
+            <button type="button">Preview</button>
+          </form>
+        </article>
+
+        <article class="panel preview-panel">
+          <div class="panel-head">
+            <h2>Trade Preview</h2>
+            <span class="subtle">Deterministic backend</span>
+          </div>
+          <div class="preview-stack">
+            <div class="metric">
+              <span>Buy</span>
+              <strong>MSFT</strong>
+            </div>
+            <div class="metric">
+              <span>Estimated quantity</span>
+              <strong>0.9836</strong>
+            </div>
+            <div class="metric">
+              <span>Estimated notional</span>
+              <strong>£300.00</strong>
+            </div>
+            <div class="metric">
+              <span>Status</span>
+              <strong>Requires approval</strong>
+            </div>
+          </div>
+          <div class="approval-row">
+            <button class="approve" type="button">Approve</button>
+            <button class="reject" type="button">Reject</button>
+          </div>
+        </article>
+
+        <article class="panel portfolio-panel">
+          <div class="panel-head">
+            <h2>Portfolio</h2>
+            <span class="subtle">ISA only</span>
+          </div>
+          <div class="metric">
+            <span>Cash</span>
+            <strong>£10,000</strong>
+          </div>
+          <div class="metric">
+            <span>Total value</span>
+            <strong>£35,000</strong>
+          </div>
+          <div class="metric">
+            <span>Largest position</span>
+            <strong>MSFT 10.9%</strong>
+          </div>
+          <div class="bar">
+            <span style="width: 34%"></span>
+          </div>
+        </article>
+
+        <article class="panel activity-panel">
+          <div class="panel-head">
+            <h2>Activity</h2>
+            <span class="subtle">Audit trail</span>
+          </div>
+          <ul class="activity-list">
+            <li>Chat received: buy £300 of Microsoft</li>
+            <li>Preview created for buy MSFT</li>
+            <li>Approval request created</li>
+            <li>Paper mode enabled</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

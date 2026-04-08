@@ -1,0 +1,9 @@
+{
+  "name": "@butr/llm",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@butr/domain": "workspace:*"
+  }
+}
