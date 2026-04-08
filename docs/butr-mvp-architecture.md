@@ -2,7 +2,7 @@
 
 ## 1. Product goal
 
-Butr is a calm, AI-native investing copilot for UK retail investors. The MVP should help users understand their portfolio, preview trades, and execute approved actions safely through Trading 212, with special attention to Stocks & Shares ISA constraints and investor intent clarity.
+Butr is a calm, AI-native investing copilot for UK retail investors. The MVP should help users understand their portfolio, preview trades, and prepare approved actions safely through Trading 212, with special attention to Stocks & Shares ISA constraints and investor intent clarity.
 
 The product should feel like a control layer above the broker:
 
@@ -308,10 +308,10 @@ Responsible for:
 
 Responsible for:
 
-- re-validating before submit
-- submitting orders through the broker adapter
-- persisting execution results
-- handling retries and partial failures safely
+- turning approvals into execution-ready tickets
+- re-validating before any future broker submission
+- persisting execution tickets and any later execution results
+- handling retries and partial failures safely when broker submission is enabled
 
 ### Audit service
 
@@ -320,7 +320,7 @@ Responsible for:
 - immutable action history
 - request/response logging
 - rule-check history
-- execution trail
+- approval and execution-ticket trail
 
 ## 5. Chat-to-trade request flow
 
@@ -336,7 +336,6 @@ sequenceDiagram
     participant R as Rules Engine
     participant AP as Approval Service
     participant E as Execution Service
-    participant B as Broker Adapter
 
     U->>W: "Can I buy £300 of Microsoft in my ISA?"
     W->>A: chat message
@@ -351,21 +350,19 @@ sequenceDiagram
     A-->>W: trade preview + explanation + approval request
     U->>W: approve
     W->>AP: approve request
-    AP->>E: execute approved preview
+    AP->>E: create execution-ready ticket
     E->>R: re-check current state
     R-->>E: still valid
-    E->>B: submit order
-    B-->>E: order result
-    E-->>W: execution result
+    E-->>W: manual execution ticket
 ```
 
 ### Flow rules
 
 1. The LLM may parse the user's request into structured intent.
-2. The backend must validate the parsed intent before any preview or execution.
+2. The backend must validate the parsed intent before any preview or execution ticket.
 3. The rules engine must run before preview.
-4. Approval is required before any broker submission.
-5. Execution must re-check account state in case anything changed while the user was deciding.
+4. Approval is required before any execution-ready ticket is issued.
+5. The system must re-check account state in case anything changed while the user was deciding.
 6. Every step should be auditable.
 
 ## 6. Safest MVP scope
@@ -385,7 +382,7 @@ The safest buildable MVP is narrower than the full vision.
 - simple buy/sell intent parsing
 - trade preview generation
 - explicit approve/reject flow
-- order execution after approval
+- manual execution ticket after approval
 - audit trail
 
 ### Out of scope for V1
@@ -404,10 +401,10 @@ The safest buildable MVP is narrower than the full vision.
 
 - only one broker at launch
 - only a small set of action types
-- only approved actions can execute
+- only approved actions can produce execution-ready tickets
 - cap single-trade exposure
 - enforce a cash buffer
-- always show human-readable impact before execution
+- always show human-readable impact before any next action
 - fail closed when data is stale or incomplete
 
 ## 7. Recommended tech stack
@@ -463,7 +460,7 @@ Goal: establish the product vocabulary and safe architecture.
 - define domain models
 - define broker adapter interface
 - define rules engine interface
-- define approval/execution contracts
+- define approval and execution-ticket contracts
 - set up linting, formatting, CI, test harness
 
 ### Phase 1: Read-only portfolio copilot
@@ -488,14 +485,14 @@ Goal: the system can reason about a proposed trade without executing it.
 - render preview card
 - create approval request
 
-### Phase 3: Approval and execution
+### Phase 3: Approval and execution tickets
 
-Goal: approved trades can be submitted safely.
+Goal: approved trades can be turned into safe next actions.
 
 - explicit approve/reject actions
-- revalidation at execution time
-- broker order submission
-- execution result tracking
+- revalidation at approval time
+- execution ticket creation
+- optional broker submission behind a stricter internal gate
 - failure handling and retry policy
 
 ### Phase 4: Hardening
@@ -539,7 +536,7 @@ Build the smallest version that can do this:
 4. parse "buy £300 of Microsoft"
 5. generate a trade preview with rule checks
 6. require explicit approval
-7. submit the order
+7. issue an execution-ready manual ticket
 8. record the full audit trail
 
 That is already a real product, and it establishes the exact architecture Butr needs to grow safely.

@@ -19,7 +19,7 @@
             <h1>Butr</h1>
           </div>
         </div>
-        <p class="lede">Bring your own AI chat. Connect your Trading 212 key to Butr. Butr handles preview, approval, and execution for Stocks & Shares ISA accounts.</p>
+        <p class="lede">Bring your own AI chat. Connect your Trading 212 key to Butr. Butr turns prompts into portfolio-aware previews, approvals, and execution-ready tickets for Stocks &amp; Shares ISA accounts.</p>
         <div class="status-row">
           <span class="pill">Website is marketing only</span>
           <span class="pill pill-muted">API-first product</span>
@@ -36,7 +36,7 @@
           <ol class="steps">
             <li>Connect your Trading 212 API key and secret to Butr.</li>
             <li>Ask your preferred AI chat client to create a trade intent.</li>
-            <li>Butr previews, checks, approves, and executes on your behalf.</li>
+            <li>Butr previews, checks, approves, and returns an execution-ready ticket.</li>
           </ol>
         </article>
 
@@ -50,6 +50,8 @@
             <code>POST /setup/trading212</code>
             <code>POST /trade-intents/preview</code>
             <code>POST /approvals/:id/approve</code>
+            <code>GET /execution-tickets</code>
+            <code>GET /activity</code>
           </div>
         </article>
 
@@ -62,7 +64,7 @@
             <li>No in-app portfolio dashboard</li>
             <li>No social trading or mirror market</li>
             <li>No autonomous strategy engine</li>
-            <li>No multi-broker complexity in v1</li>
+            <li>No public live execution path in v1</li>
           </ul>
         </article>
 
@@ -96,7 +98,7 @@
               </label>
               <label class="check">
                 <input type="checkbox" name="ack" required />
-                <span>I understand Butr is a software control layer and I must approve any trade before execution.</span>
+                <span>I understand Butr is a software control layer and I must approve any trade before acting on an execution ticket.</span>
               </label>
               <label class="check check-optional">
                 <input type="checkbox" name="updates" />

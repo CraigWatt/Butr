@@ -18,6 +18,8 @@ export type OrderStatus =
 
 export type ApprovalStatus = "pending" | "approved" | "rejected" | "expired";
 
+export type ExecutionMode = "manual_ticket" | "broker_submit";
+
 export type AssetClass = "equity" | "etf" | "fund" | "cash" | "other";
 
 export interface MoneyValue {
@@ -132,6 +134,17 @@ export interface ApprovalRequest {
   requestedAt: string;
   decidedAt?: string;
   decidedBy?: string;
+}
+
+export interface ExecutionTicket {
+  id: string;
+  approvalRequestId: string;
+  tradePreviewId: string;
+  mode: ExecutionMode;
+  status: "ready" | "used" | "cancelled";
+  summary: string;
+  instructions: string[];
+  createdAt: string;
 }
 
 export interface ExecutionResult {

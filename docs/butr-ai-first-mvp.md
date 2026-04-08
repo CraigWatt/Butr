@@ -8,7 +8,7 @@ Butr v1 is an API-first Trading 212 control layer.
 - API: real product surface
 - User-owned AI client: optional front end
 - Trading 212 connection: stored in Butr
-- Execution: approval-first
+- Execution: preview-first, approval-first, manual ticket by default
 - Scope: Stocks & Shares ISA only
 
 ## User flow
@@ -21,7 +21,7 @@ Butr v1 is an API-first Trading 212 control layer.
 3. The AI client converts the request into a structured trade intent and sends it to Butr.
 4. Butr checks portfolio state, applies rules, and returns a preview.
 5. The user approves the trade.
-6. Butr submits the order through Trading 212.
+6. Butr returns an execution-ready manual ticket for the user to place in Trading 212.
 
 ## MVP endpoints
 
@@ -29,6 +29,7 @@ Butr v1 is an API-first Trading 212 control layer.
 - `POST /setup/trading212`
 - `POST /trade-intents/preview`
 - `POST /approvals/:id/approve`
+- `GET /execution-tickets`
 - `GET /portfolio`
 - `GET /activity`
 
@@ -38,6 +39,7 @@ Butr v1 is an API-first Trading 212 control layer.
 - social or mirror trading
 - multi-broker support
 - autonomous strategies
+- public live broker execution
 - broad financial planning
 
 ## Website direction
@@ -50,4 +52,3 @@ The public site should stay simple:
 - Trading 212 setup note
 - no demo trading UI
 - no fake portfolio cards
-

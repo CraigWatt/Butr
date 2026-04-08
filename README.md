@@ -1,6 +1,6 @@
 # Butr
 
-Butr is an AI-native investing copilot for UK retail investors, starting with Trading 212 and ISA-aware portfolio control.
+Butr is an AI-native investing control layer for UK retail investors, starting with Trading 212 and ISA-aware portfolio workflows.
 
 This repo is intentionally designed around a calm, approval-first control layer rather than autonomous trading.
 The working tree is organized around four high-level buckets: `infra`, `services`, `platform`, and `tests`.
@@ -9,11 +9,11 @@ For the AI-first MVP, the website is marketing-only and the API is the product s
 
 ## Initial product shape
 
-- Web-first chat interface
-- Deterministic backend control layer
-- Broker adapter abstraction
-- Explicit approval before execution
-- Portfolio state, rules, previews, and audit logs as first-class domain concepts
+- Marketing-only website
+- API-first control layer for external AI clients
+- Deterministic portfolio checks and trade previews
+- Approval objects and manual execution tickets
+- Portfolio state, rules, previews, approvals, and audit logs as first-class domain concepts
 
 ## Recommended repo structure
 
@@ -33,8 +33,9 @@ The backend is the source of truth. The LLM can interpret intent and explain res
 
 - Trading 212 first
 - ISA-aware portfolio workflows
-- Read portfolio state, generate trade previews, require approval, then execute
+- Read portfolio state, generate trade previews, require approval, then issue execution-ready tickets
 - No autonomous strategies
+- No public live execution path in v1
 - No multi-broker support yet
 - No broad financial planning
 

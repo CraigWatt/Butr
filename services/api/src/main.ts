@@ -1,14 +1,37 @@
 import type { TradeIntent } from "@butr/domain";
 import { evaluateTrade } from "@butr/rules-engine";
-import { approveExecution, createApprovalRequest, executeApprovedPreview } from "@butr/execution";
+import { approveExecution, createApprovalRequest, createManualExecutionTicket } from "@butr/execution";
 import { explainTradePreview, parseIntentText } from "@butr/llm";
 import { createTrading212Adapter } from "./broker";
 import { createButrRepository } from "./repository-factory";
+import type { Trading212Connection } from "./repository";
 
 const repository = createButrRepository();
 
+export function saveTrading212Connection(input: { apiKey: string; apiSecret: string }): Trading212Connection {
+  const connection: Trading212Connection = {
+    apiKey: input.apiKey,
+    apiSecret: input.apiSecret,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  };
+  repository.saveTrading212Connection(connection);
+  repository.recordAuditEvent("connection_saved", "Trading 212 connection saved.");
+  return connection;
+}
+
+export function getTrading212ConnectionStatus() {
+  return {
+    connected: Boolean(repository.getTrading212Connection()),
+    executionMode: "manual_ticket" as const,
+    liveExecutionEnabled: false,
+    accountType: "stocks_and_shares_isa" as const,
+    broker: "trading212" as const
+  };
+}
+
 export async function getPortfolioSnapshot(mode: "paper" | "live" = "paper") {
-  const adapter = createTrading212Adapter(mode);
+  const adapter = createTrading212Adapter(mode, repository.getTrading212Connection());
   const account = await adapter.getAccountSummary();
   const positions = await adapter.listPositions();
   const orders = await adapter.listOrders();
@@ -16,7 +39,7 @@ export async function getPortfolioSnapshot(mode: "paper" | "live" = "paper") {
 }
 
 export async function previewTradeIntent(intent: TradeIntent) {
-  const adapter = createTrading212Adapter(intent.mode);
+  const adapter = createTrading212Adapter(intent.mode, repository.getTrading212Connection());
   const account = await adapter.getAccountSummary();
   const preview = await adapter.previewTrade(intent);
   const positions = await adapter.listPositions();
@@ -80,6 +103,10 @@ export async function handleChatMessage(input: {
   };
 }
 
+export async function previewStructuredTradeIntent(intent: TradeIntent) {
+  return previewTradeIntent(intent);
+}
+
 export async function approveTrade(approvalRequestId: string) {
   const approvalRequest = repository.getApprovalRequest(approvalRequestId);
   if (!approvalRequest) {
@@ -93,14 +120,14 @@ export async function approveTrade(approvalRequestId: string) {
     throw new Error(`Trade preview not found: ${approvedRequest.tradePreviewId}`);
   }
 
-  const executionResult = executeApprovedPreview(preview, approvedRequest.id);
-  repository.saveExecutionResult(executionResult);
+  const executionTicket = createManualExecutionTicket(preview, approvedRequest);
+  repository.saveExecutionTicket(executionTicket);
   repository.recordAuditEvent("approval_decided", `Approved request ${approvedRequest.id}.`);
-  repository.recordAuditEvent("execution_recorded", `Recorded execution result ${executionResult.id}.`);
+  repository.recordAuditEvent("execution_ticket_created", `Created execution ticket ${executionTicket.id}.`);
 
   return {
     approvalRequest: approvedRequest,
-    executionResult,
+    executionTicket,
     preview
   };
 }
@@ -109,6 +136,7 @@ export function getButrActivityFeed() {
   return {
     previews: repository.listTradePreviews(),
     approvals: repository.listApprovalRequests(),
+    executionTickets: repository.listExecutionTickets(),
     executions: repository.listExecutionResults(),
     audits: repository.listAuditEvents()
   };
@@ -116,4 +144,8 @@ export function getButrActivityFeed() {
 
 export function listTradePreviews() {
   return repository.listTradePreviews();
+}
+
+export function listExecutionTickets() {
+  return repository.listExecutionTickets();
 }

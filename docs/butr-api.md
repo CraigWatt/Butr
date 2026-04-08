@@ -36,6 +36,8 @@ Response:
 ```json
 {
   "connected": true,
+  "executionMode": "manual_ticket",
+  "liveExecutionEnabled": false,
   "accountType": "stocks_and_shares_isa",
   "broker": "trading212"
 }
@@ -69,14 +71,34 @@ Request:
 
 Response includes a `preview` and `approvalRequest`.
 
-### 4. Approve execution
+### 4. Approve preview
 
 `POST /approvals/:id/approve`
+
+Response includes an approved `approvalRequest` and an `executionTicket`.
+
+```json
+{
+  "approvalRequest": {
+    "id": "approval_123",
+    "status": "approved"
+  },
+  "executionTicket": {
+    "id": "ticket_123",
+    "mode": "manual_ticket",
+    "status": "ready",
+    "summary": "BUY 0.983607 MSFT for approximately 300.00 GBP."
+  }
+}
+```
+
+### 5. List execution tickets
+
+`GET /execution-tickets`
 
 ## Notes for AI clients
 
 - Butr is not the chat UI.
 - AI clients should convert user intent into structured JSON.
-- Butr is responsible for portfolio state, validation, preview, approval gating, and execution.
+- Butr is responsible for portfolio state, validation, preview, approval gating, and execution readiness.
 - The website is marketing only.
-
