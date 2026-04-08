@@ -5,6 +5,7 @@ Butr is an AI-native investing copilot for UK retail investors, starting with Tr
 This repo is intentionally designed around a calm, approval-first control layer rather than autonomous trading.
 The working tree is organized around four high-level buckets: `infra`, `services`, `platform`, and `tests`.
 Butr v1 is Stocks & Shares ISA only, with an explicit `paper` vs `live` operating mode.
+For the AI-first MVP, the website is marketing-only and the API is the product surface. See [docs/butr-ai-first-mvp.md](docs/butr-ai-first-mvp.md).
 
 ## Initial product shape
 
@@ -39,3 +40,5 @@ The backend is the source of truth. The LLM can interpret intent and explain res
 
 For the initial system design, see [docs/butr-mvp-architecture.md](docs/butr-mvp-architecture.md).
 For the frontend and brand direction, see [platform/web/DESIGN.md](platform/web/DESIGN.md) and [docs/butr-brand.md](docs/butr-brand.md).
+For the AI client contract, see [docs/butr-api.md](docs/butr-api.md).
+For a practical privacy/security launch checklist, see [docs/butr-privacy-security-checklist.md](docs/butr-privacy-security-checklist.md).
