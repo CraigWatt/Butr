@@ -1,5 +1,11 @@
 <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="3" y="10" width="26" height="16" rx="3" fill="#E8B923"/>
-  <rect x="3" y="10" width="26" height="5" rx="3" fill="#F5D547"/>
-  <ellipse cx="10" cy="13" rx="3" ry="1.5" fill="white" opacity="0.4"/>
+  <!-- Dish -->
+  <ellipse cx="16" cy="26" rx="14" ry="4" fill="#D6E4ED" stroke="#2D3436" stroke-width="1.5"/>
+  <ellipse cx="16" cy="24" rx="11" ry="3" fill="#FFF5DC" stroke="#2D3436" stroke-width="1.5"/>
+  <!-- Butter block -->
+  <path d="M6 12 L26 12 L26 20 L6 20 Z" fill="#E8B923" stroke="#2D3436" stroke-width="1.5"/>
+  <path d="M6 12 L10 6 L30 6 L26 12 Z" fill="#FFE566" stroke="#2D3436" stroke-width="1.5"/>
+  <path d="M26 12 L30 6 L30 14 L26 20 Z" fill="#D4A520" stroke="#2D3436" stroke-width="1.5"/>
+  <!-- Drip -->
+  <path d="M25 16 Q27 17 26 21 Q25 23 24 21 Q23 19 24 17 Q25 16 25 16" fill="#F5D547" stroke="#2D3436" stroke-width="1"/>
 </svg>

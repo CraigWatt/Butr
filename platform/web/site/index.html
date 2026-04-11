@@ -14,17 +14,31 @@
     <main class="page-shell">
       <section class="hero-card">
         <div class="brand-row">
-          <svg class="brand-mark" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Butter pat base -->
-            <rect x="8" y="24" width="64" height="40" rx="6" fill="#E8B923"/>
-            <!-- Top highlight -->
-            <rect x="8" y="24" width="64" height="12" rx="6" fill="#F5D547"/>
-            <!-- Subtle lines on butter -->
-            <rect x="16" y="40" width="48" height="2" rx="1" fill="#C9A01E" opacity="0.3"/>
-            <rect x="16" y="48" width="48" height="2" rx="1" fill="#C9A01E" opacity="0.3"/>
-            <rect x="16" y="56" width="32" height="2" rx="1" fill="#C9A01E" opacity="0.3"/>
-            <!-- Shine -->
-            <ellipse cx="24" cy="32" rx="8" ry="4" fill="white" opacity="0.4"/>
+          <svg class="brand-mark" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Shadow -->
+            <ellipse cx="60" cy="72" rx="48" ry="6" fill="#1a1a1a" opacity="0.08"/>
+            <!-- Glass dish base -->
+            <ellipse cx="60" cy="62" rx="52" ry="12" fill="#D6E4ED" stroke="#2D3436" stroke-width="2.5"/>
+            <!-- Dish rim highlight -->
+            <ellipse cx="60" cy="62" rx="48" ry="9" fill="#E8F1F8"/>
+            <ellipse cx="75" cy="64" rx="6" ry="2" fill="white" opacity="0.6"/>
+            <!-- Cream dish top -->
+            <ellipse cx="60" cy="54" rx="44" ry="10" fill="#FFF5DC" stroke="#2D3436" stroke-width="2.5"/>
+            <!-- Melted butter pool -->
+            <ellipse cx="60" cy="52" rx="32" ry="6" fill="#F5D547" opacity="0.5"/>
+            <!-- Butter block - 3D box -->
+            <!-- Back face -->
+            <path d="M30 28 L90 28 L90 48 L30 48 Z" fill="#E8B923" stroke="#2D3436" stroke-width="2.5"/>
+            <!-- Top face -->
+            <path d="M30 28 L42 18 L102 18 L90 28 Z" fill="#FFE566" stroke="#2D3436" stroke-width="2.5"/>
+            <!-- Right face -->
+            <path d="M90 28 L102 18 L102 38 L90 48 Z" fill="#D4A520" stroke="#2D3436" stroke-width="2.5"/>
+            <!-- Top highlight shine -->
+            <path d="M36 26 L46 17 L62 17 L52 26 Z" fill="white" opacity="0.35"/>
+            <!-- Edge line on top -->
+            <path d="M42 18 L42 19 L90 19" stroke="#C9A01E" stroke-width="1" opacity="0.4"/>
+            <!-- Melting drip -->
+            <path d="M88 42 Q92 44 91 52 Q90 58 86 54 Q84 50 86 46 Q87 43 88 42" fill="#F5D547" stroke="#2D3436" stroke-width="2"/>
           </svg>
           <div class="brand-text">
             <h1>Butr</h1>
@@ -136,9 +150,17 @@
       </section>
 
       <footer class="site-footer">
-        <svg class="footer-mark" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="24" width="64" height="40" rx="6" fill="#E8B923"/>
-          <rect x="8" y="24" width="64" height="12" rx="6" fill="#F5D547"/>
+        <svg class="footer-mark" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="60" cy="72" rx="48" ry="6" fill="#1a1a1a" opacity="0.08"/>
+          <ellipse cx="60" cy="62" rx="52" ry="12" fill="#D6E4ED" stroke="#2D3436" stroke-width="2.5"/>
+          <ellipse cx="60" cy="62" rx="48" ry="9" fill="#E8F1F8"/>
+          <ellipse cx="60" cy="54" rx="44" ry="10" fill="#FFF5DC" stroke="#2D3436" stroke-width="2.5"/>
+          <ellipse cx="60" cy="52" rx="32" ry="6" fill="#F5D547" opacity="0.5"/>
+          <path d="M30 28 L90 28 L90 48 L30 48 Z" fill="#E8B923" stroke="#2D3436" stroke-width="2.5"/>
+          <path d="M30 28 L42 18 L102 18 L90 28 Z" fill="#FFE566" stroke="#2D3436" stroke-width="2.5"/>
+          <path d="M90 28 L102 18 L102 38 L90 48 Z" fill="#D4A520" stroke="#2D3436" stroke-width="2.5"/>
+          <path d="M36 26 L46 17 L62 17 L52 26 Z" fill="white" opacity="0.35"/>
+          <path d="M88 42 Q92 44 91 52 Q90 58 86 54 Q84 50 86 46 Q87 43 88 42" fill="#F5D547" stroke="#2D3436" stroke-width="2"/>
         </svg>
         <nav class="footer-links">
           <a href="./terms.html">Terms</a>
