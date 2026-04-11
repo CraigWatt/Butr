@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Butr</title>
-    <meta name="description" content="Butr is a calm, approval-first investing copilot for UK ISA investors." />
-    <link rel="icon" href="./brand/butr-logo.svg" type="image/svg+xml" />
+    <title>Butr - AI-native investing control for UK ISAs</title>
+    <meta name="description" content="Butr is a calm, approval-first investing copilot for UK ISA investors. Connect your Trading 212 key and let AI help you trade smarter." />
+    <meta name="theme-color" content="#FFFBF5" />
+    <link rel="icon" href="./brand/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./app.js"></script>
   </head>
@@ -13,74 +14,83 @@
     <main class="page-shell">
       <section class="hero-card">
         <div class="brand-row">
-          <img class="brand-mark" src="./brand/butr-logo.svg" alt="Butr logo" />
-          <div>
-            <p class="eyebrow">AI-first Trading 212 control</p>
+          <svg class="brand-mark" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Butter pat base -->
+            <rect x="8" y="24" width="64" height="40" rx="6" fill="#E8B923"/>
+            <!-- Top highlight -->
+            <rect x="8" y="24" width="64" height="12" rx="6" fill="#F5D547"/>
+            <!-- Subtle lines on butter -->
+            <rect x="16" y="40" width="48" height="2" rx="1" fill="#C9A01E" opacity="0.3"/>
+            <rect x="16" y="48" width="48" height="2" rx="1" fill="#C9A01E" opacity="0.3"/>
+            <rect x="16" y="56" width="32" height="2" rx="1" fill="#C9A01E" opacity="0.3"/>
+            <!-- Shine -->
+            <ellipse cx="24" cy="32" rx="8" ry="4" fill="white" opacity="0.4"/>
+          </svg>
+          <div class="brand-text">
             <h1>Butr</h1>
           </div>
         </div>
-        <p class="lede">Bring your own AI chat. Connect your Trading 212 key to Butr. Butr turns prompts into portfolio-aware previews, approvals, and execution-ready tickets for Stocks &amp; Shares ISA accounts.</p>
+        <p class="tagline">AI-native investing control for UK ISAs</p>
+        <p class="lede">Connect your Trading 212 API key. Ask your favourite AI to build trades. Butr previews, validates, and creates execution-ready tickets you approve before anything happens.</p>
         <div class="status-row">
-          <span class="pill">Website is marketing only</span>
-          <span class="pill pill-muted">API-first product</span>
-          <span class="pill pill-muted">Stocks & Shares ISA only</span>
+          <span class="pill">Pre-launch</span>
+          <span class="pill pill-muted">Stocks &amp; Shares ISA only</span>
         </div>
       </section>
 
       <section class="stack">
-        <article class="panel feature-panel">
+        <article class="panel">
           <div class="panel-head">
             <h2>How it works</h2>
-            <span class="subtle">No in-site chat needed</span>
+            <p class="subtle">No in-app chat needed</p>
           </div>
           <ol class="steps">
-            <li>Connect your Trading 212 API key and secret to Butr.</li>
-            <li>Ask your preferred AI chat client to create a trade intent.</li>
-            <li>Butr previews, checks, approves, and returns an execution-ready ticket.</li>
+            <li>Connect your Trading 212 API key to Butr securely.</li>
+            <li>Use any AI chat (ChatGPT, Claude, etc.) to describe your trade intent.</li>
+            <li>Butr creates a portfolio-aware preview with validation checks.</li>
+            <li>Approve the ticket. Only then does anything execute.</li>
           </ol>
         </article>
 
-        <article class="panel feature-panel">
+        <article class="panel">
           <div class="panel-head">
-            <h2>API surface</h2>
-            <span class="subtle">Use any chat UI you want</span>
-          </div>
-          <div class="code-block">
-            <code>GET /status</code>
-            <code>POST /setup/trading212</code>
-            <code>POST /trade-intents/preview</code>
-            <code>POST /approvals/:id/approve</code>
-            <code>GET /execution-tickets</code>
-            <code>GET /activity</code>
-          </div>
-        </article>
-
-        <article class="panel note-panel">
-          <div class="panel-head">
-            <h2>What Butr is not</h2>
-            <span class="subtle">No fluff</span>
+            <h2>Why Butr</h2>
+            <p class="subtle">Control without complexity</p>
           </div>
           <ul class="plain-list">
-            <li>No in-app portfolio dashboard</li>
-            <li>No social trading or mirror market</li>
-            <li>No autonomous strategy engine</li>
-            <li>No public live execution path in v1</li>
+            <li>Human-in-the-loop: every trade requires your approval</li>
+            <li>Portfolio-aware: checks positions before suggesting</li>
+            <li>Bring your own AI: works with any chat client</li>
+            <li>UK-focused: built for ISA compliance</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>What Butr is not</h2>
+            <p class="subtle">Staying focused</p>
+          </div>
+          <ul class="plain-list">
+            <li>No autonomous trading or robo-advisor</li>
+            <li>No social trading or copy features</li>
+            <li>No portfolio dashboard (use Trading 212 for that)</li>
+            <li>No live execution in v1 (approval tickets only)</li>
           </ul>
         </article>
 
         <article class="panel signup-panel" id="signup">
           <div class="panel-head">
             <h2>Join the waitlist</h2>
-            <span class="subtle">Minimal signup</span>
+            <p class="subtle">Be first to know when we launch</p>
           </div>
-          <p class="signup-copy">Get updates when the AI-first API and user connection flow are ready.</p>
+          <p class="signup-copy">Get updates when the API and connection flow are ready.</p>
           <form class="signup-form" data-signup-email="hello@butr.app">
             <label class="field">
               <span>Email address</span>
               <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
             </label>
             <label class="field">
-              <span>Name</span>
+              <span>Name (optional)</span>
               <input type="text" name="name" autocomplete="name" placeholder="Your name" />
             </label>
             <div class="checks">
@@ -98,32 +108,45 @@
               </label>
               <label class="check">
                 <input type="checkbox" name="ack" required />
-                <span>I understand Butr is a software control layer and I must approve any trade before acting on an execution ticket.</span>
+                <span>I understand Butr is a control layer and I must approve any trade before execution.</span>
               </label>
               <label class="check check-optional">
                 <input type="checkbox" name="updates" />
-                <span>Send me product updates.</span>
+                <span>Send me product updates (optional).</span>
               </label>
             </div>
-            <button class="cta-button" type="submit">Request access</button>
-            <p class="signup-note">This opens your email app with a prefilled signup request if you want to send it manually.</p>
+            <button class="cta-button" type="submit">Request early access</button>
+            <p class="signup-note">Opens your email app with a prefilled request.</p>
             <p class="signup-status" aria-live="polite"></p>
           </form>
         </article>
 
-        <article class="panel note-panel">
+        <article class="panel">
           <div class="panel-head">
-            <h2>Privacy and security</h2>
-            <span class="subtle">Launch basics</span>
+            <h2>Privacy &amp; security</h2>
+            <p class="subtle">Your keys, your control</p>
           </div>
           <ul class="plain-list">
-            <li>Encrypt Trading 212 credentials at rest</li>
-            <li>Keep secrets out of logs and analytics</li>
-            <li>Support data access, deletion, and revocation</li>
-            <li>Use a DPIA before launch if trade profiling is active</li>
+            <li>API credentials encrypted at rest</li>
+            <li>No secrets in logs or analytics</li>
+            <li>Full data access, deletion, and revocation</li>
+            <li>DPIA before any trade profiling goes live</li>
           </ul>
         </article>
       </section>
+
+      <footer class="site-footer">
+        <svg class="footer-mark" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="24" width="64" height="40" rx="6" fill="#E8B923"/>
+          <rect x="8" y="24" width="64" height="12" rx="6" fill="#F5D547"/>
+        </svg>
+        <nav class="footer-links">
+          <a href="./terms.html">Terms</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="mailto:hello@butr.app">Contact</a>
+        </nav>
+        <p class="footer-copy">&copy; 2025 Butr. All rights reserved.</p>
+      </footer>
     </main>
   </body>
 </html>
