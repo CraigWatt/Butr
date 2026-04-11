@@ -5,6 +5,5 @@ This folder contains the shared product surface for Butr.
 Initial responsibilities:
 
 - domain contracts
-- web frontend shell
-- shared UI and product types
-
+- static marketing site assets
+- brand and design system references
