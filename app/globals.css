@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), ui-serif, Georgia, serif;
+
+  /* Butter-inspired warm palette */
+  --color-background: #FDF6E3;
+  --color-foreground: #2C2416;
+  --color-card: #FFFCF5;
+  --color-card-foreground: #2C2416;
+  --color-primary: #E8B923;
+  --color-primary-foreground: #2C2416;
+  --color-secondary: #F5EDD8;
+  --color-secondary-foreground: #5C5041;
+  --color-muted: #EDE5D4;
+  --color-muted-foreground: #7A6F5D;
+  --color-accent: #D4A017;
+  --color-accent-foreground: #2C2416;
+  --color-border: rgba(44, 36, 22, 0.08);
+  --color-input: rgba(44, 36, 22, 0.06);
+  --color-ring: #E8B923;
+
+  --radius: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: rgba(232, 185, 35, 0.3);
+  color: var(--color-foreground);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+/* Form elements */
+input,
+textarea {
+  font-family: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-muted-foreground);
+  opacity: 0.7;
+}
